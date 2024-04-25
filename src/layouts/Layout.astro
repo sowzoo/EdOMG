@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.ts";
+const { metaTitle, metaDescription, metaImage } = Astro.props;
+let path = Astro.url.pathname;
+import { ViewTransitions } from "astro:transitions";
+import "@fontsource-variable/open-sans";
+import Hero from "../components/Hero.astro";
+
+let title = "";
+if (path === "/") {
+  title = `Home | ${SITE_TITLE}`;
+} else {
+  title = metaTitle
+    ? `${metaTitle} | ${SITE_TITLE}`.trim()
+    : path
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join("-")
+        .split("/")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .filter((p) => p !== "")
+        .join(" | ")
+        .replaceAll("%20", " ") +
+      " | " +
+      SITE_TITLE.trim();
+}
+---
+
+<html data-theme="fantasy" lang="en">
+  <head>
+    <BaseHead
+      title={title || SITE_TITLE}
+      description={metaDescription || SITE_DESCRIPTION}
+      image={metaImage}
+    />
+    <ViewTransitions />
+  </head>
+  <Navbar />
+  <body>
+    <slot />
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,193 @@
+---
+const today = new Date();
+import { Image } from "astro:assets";
+import logo from "../assets/logo.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="bg-white">
+  <div
+    class="mx-auto max-w-7xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-8 lg:px-4"
+  >
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <div>
+        <Image src={logo} alt="logo" class="mt-1 h-32 lg:mt-0 w-auto" />
+      </div>
+
+      <ul class="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
+        <li>
+          <a
+            href="https://www.linkedin.com/"
+            target=""
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon class="inline text-xl md:text-2xl mr-2" name="linked" /></a
+          >
+        </li>
+        <li>
+          <a
+            href=" https://www.instagram.com/"
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon
+              class="inline text-xl md:text-2xl mr-2"
+              name="instagram"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/"
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon class="inline text-xl md:text-2xl mr-2" name="twitter" /></a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href=" https://www.facebook.com// 
+  "
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon class="inline text-xl md:text-2xl mr-2" name="facebook" /></a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/"
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon class="inline text-xl md:text-2xl mr-2" name="youtube" /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com"
+            target="_blank"
+            class="text-gray-900 link link-hover whitespace-nowrap"
+            ><Icon class="inline text-xl md:text-2xl mr-2" name="tiktok" /></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16"
+    >
+      <div>
+        <p class="font-medium text-gray-900">Services</p>
+
+        <ul class="mt-6 space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Lorem
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Company Review
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Accounts Review
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              HR Consulting
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              SEO Optimisation
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-medium text-gray-900">Company</p>
+
+        <ul class="mt-6 space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Meet the Team
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Accounts Review
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-medium text-gray-900">Helpful Links</p>
+
+        <ul class="mt-6 space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              FAQs
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Live Chat
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-medium text-gray-900">Legal</p>
+
+        <ul class="mt-6 space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Accessibility
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Returns Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Refund Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="text-gray-700 transition hover:opacity-75">
+              Hiring Statistics
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-500">
+      &copy; 2022. Company Name. All rights reserved.
+    </p>
+  </div>
+</footer>

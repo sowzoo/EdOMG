@@ -1,0 +1,56 @@
+---
+import service from "../assets/service (1).png";
+import service2 from "../assets/service (2).png";
+import service3 from "../assets/service (3).png";
+import ServiceCard from "./ServiceCard.astro";
+
+const services = [
+  {
+    title: "Custom Website Design",
+    description:
+      "Get a tailor-made website design crafted to suit your brand identity and business goals. Our expert designers will work closely with you to create a stunning and user-friendly website that sets you apart from the competition.",
+    image: service,
+  },
+  {
+    title: "Responsive Web Development",
+    description:
+      "Ensure your website looks great and functions flawlessly on all devices, from desktops to smartphones. Our developers specialize in responsive design techniques to deliver a seamless user experience across different screen sizes and platforms.",
+    image: service2,
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Maximize your online sales with our customized e-commerce solutions. From intuitive product catalogs to secure payment gateways, we'll build a robust online store that drives conversions and enhances your bottom line.",
+    image: service3,
+  },
+];
+---
+
+<div
+  id="services"
+  class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-fuel-600"
+>
+  <div class="container xl:max-w-7xl mx-auto px-4">
+    <header class="text-center mx-auto mb-12 lg:px-20">
+      <h2 class="text-2xl md:text-4xl leading-normal mb-2 font-bold text-black">
+        What We Do
+      </h2>
+      <p
+        class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 my-4"
+      >
+        Save time managing advertising &amp; Content for your business.
+      </p>
+    </header>
+    <div class="flex flex-wrap flex-row -mx-4 text-center">
+      {
+        services.map((service) => (
+          <ServiceCard
+            image={service.image}
+            title={service.title}
+            text={service.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
