@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.svg";
 
 const navLinks = [
   { label: "About", href: "/#about" },
@@ -15,12 +15,19 @@ const navLinks = [
   class="lg:flex pb-2 px-4 lg:pb-0 w-screen z-[999] text-gray-800 uppercase font-semibold"
 >
   <div class="flex w-full justify-between mx-auto max-w-7xl">
-    <a href="/">
-      <Image src={logo} alt="logo" class="mt-1 h-[76px] lg:mt-0 w-auto" />
+    <a href="/" class="flex items-center py-2">
+      <Image
+        src={logo}
+        alt="logo"
+        class="h-12 lg:h-[76px] lg:mt-0 w-auto rounded"
+      />
+      <h2 class="lg:w-10 ml-2 font-bold text-rust-500">
+        Orange Marketing Group
+      </h2>
     </a>
     <div class="block lg:hidden">
       <button
-        class="relative group"
+        class="relative group h-full mr-2"
         aria-controls="primary-navigation"
         id="toggleButton"
         aria-label="Toggle Menu"
@@ -64,15 +71,15 @@ const navLinks = [
     <nav
       id="primaryNavigation"
       aria-expanded={false}
-      class="bg-white max-h-0 lg:bg-transparent absolute lg:max-h-96 my-auto lg:h-12 lg:static top-16 left-0 lg:flex overflow-hidden transition-max-height ease-in-out duration-500"
+      class="bg-white max-h-0 lg:bg-transparent absolute h-fit lg:max-h-96 my-auto lg:h-12 lg:static top-16 left-0 lg:flex overflow-hidden transition-max-height ease-in-out duration-500"
     >
       <ul
         class="flex flex-col lg:flex-row items-center lg:gap-10 w-screen lg:w-full text-center lg:pr-4"
       >
         {
           navLinks.map((link) => (
-            <li class="text-gray-900 relative my-3 sm:my-1 pb-4 sm:pb-2 lg:pb-0 text-base md:w-full w-screen text-center after:mt-1 block after:block after:content-[''] after:absolute after:h-[4px] after:bg-lime-700 after:rounded-full after:w-full after:scale-x-0 lg:after:hover:scale-x-100 after:transition after:duration-300 after:origin-left md:border-none border-b border-gray-400">
-              <a class="text-gray-900" href={link.href}>
+            <li class="text-gray-900 relative my-3 sm:my-1 pb-4 sm:pb-2 lg:pb-0 text-base md:w-full w-screen text-center after:mt-1 block after:block after:content-[''] after:absolute after:h-[4px] after:bg-aztec-700 after:rounded-full after:w-full after:scale-x-0 lg:after:hover:scale-x-100 after:transition after:duration-300 after:origin-left md:border-none border-b border-gray-400">
+              <a class="text-gray-900 whitespace-nowrap" href={link.href}>
                 {link.label}
               </a>
             </li>
@@ -80,7 +87,7 @@ const navLinks = [
         }
         <li></li>
         <button
-          class="bg-fuel-600 hover:bg-fuel-700 text-white font-semibold py-2 px-4 rounded"
+          class="bg-copper-500 hover:bg-copper-400 text-white font-semibold py-2 px-4 rounded"
         >
           Contact
         </button>

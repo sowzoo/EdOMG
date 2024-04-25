@@ -1,7 +1,7 @@
 ---
 const today = new Date();
 import { Image } from "astro:assets";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.svg";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -10,9 +10,16 @@ import { Icon } from "astro-icon/components";
     class="mx-auto max-w-7xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-8 lg:px-4"
   >
     <div class="sm:flex sm:items-center sm:justify-between">
-      <div>
-        <Image src={logo} alt="logo" class="mt-1 h-32 lg:mt-0 w-auto" />
-      </div>
+      <a href="/" class="flex items-center py-2">
+        <Image
+          src={logo}
+          alt="logo"
+          class="h-12 lg:h-[76px] lg:mt-0 w-auto rounded"
+        />
+        <h2 class="lg:w-10 ml-2 font-bold text-rust-500">
+          Orange Marketing Group
+        </h2>
+      </a>
 
       <ul class="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
         <li>
