@@ -8,13 +8,13 @@ const services = [
   {
     title: "Custom Website Design",
     description:
-      "Get a tailor-made website design crafted to suit your brand identity and business goals. Our expert designers will work closely with you to create a stunning and user-friendly website that sets you apart from the competition.",
+      "Get a tailor-made website design crafted to suit your brand identity and business goals.",
     image: service,
   },
   {
     title: "Responsive Web Development",
     description:
-      "Ensure your website looks great and functions flawlessly on all devices, from desktops to smartphones. Our developers specialize in responsive design techniques to deliver a seamless user experience across different screen sizes and platforms.",
+      "Ensure your website looks great and functions flawlessly on all devices, from desktops to smartphones. .",
     image: service2,
   },
   {
@@ -29,26 +29,17 @@ const services = [
       "First rule of business - have customers. It's easier to succeed when people are coming to you. Do you want 5 new customers a week or 50?",
     image: service3,
   },
-  {
-    title: "Lead Generation",
-    description:
-      "First rule of business - have customers. It's easier to succeed when people are coming to you. Do you want 5 new customers a week or 50?",
-    image: service3,
-  },
-  {
-    title: "Lead Generation",
-    description:
-      "First rule of business - have customers. It's easier to succeed when people are coming to you. Do you want 5 new customers a week or 50?",
-    image: service3,
-  },
 ];
 ---
 
 <div
   id="services"
-  class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-fuel-600"
+  class="section relative py-20 pb-8 md:pt-16 md:pb-0 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-copper-900 via-copper-100 to-copper-900"
 >
-  <div class="container xl:max-w-7xl mx-auto px-4">
+  <div class="container
+  xl:max-w-7xl
+  mx-auto
+  px-4">
     <header class="text-center mx-auto mb-12 lg:px-20">
       <h2 class="text-2xl md:text-4xl leading-normal mb-2 font-bold text-black">
         What We Do
@@ -59,7 +50,7 @@ const services = [
         Save time managing advertising &amp; Content for your business.
       </p>
     </header>
-    <div class="flex flex-wrap justify-center flex-row -mx-4 text-center">
+    <div class="grid grid-cols-4 justify-center flex-row -mx-4 text-center">
       {
         services.map((service) => (
           <ServiceCard
