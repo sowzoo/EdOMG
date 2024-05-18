@@ -1,6 +1,8 @@
 ---
 import { getImage } from "astro:assets";
+import { Image } from 'astro:assets';
 import bg from "../assets/bg.png";
+import herotext from "./../assets/hero-header.svg"
 import headerimg from "../assets/hero-header.svg"
 const optimizedBackground = await getImage({
   src: bg,
@@ -17,7 +19,12 @@ const optimizedBackground = await getImage({
       <div class="flex items-center">
         <div class="md:w-1/2 px-4">
           <h1 class="text-5xl font-medium mb-6">
-            "put hero header image here"
+            <Image 
+            class="mx-auto"
+            src={herotext}
+            alt="user avatar"
+            loading="lazy"
+          />
           </h1>
           <p class="text-xl mb-12 max-w-sm">
             We connect you with those people. It's how we make your business
